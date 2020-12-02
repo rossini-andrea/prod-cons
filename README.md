@@ -30,13 +30,13 @@ consumers to read.
 
 Build with:
 
-```
+```shell
 g++ src/main.cpp -oprodcons
 ```
 
 Run:
 
-```
+```shell
 ./prodcons
 ```
 
