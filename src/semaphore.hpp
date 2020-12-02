@@ -16,7 +16,7 @@ class semaphore {
     size_t m_count;
     std::mutex m_access_mutex;
 public:
-    semaphore(size_t initial_count):
+    explicit semaphore(size_t initial_count):
         m_count(initial_count) {
 
     }
@@ -50,7 +50,7 @@ public:
     void aquire(std::function<void(void)> transaction) {
         std::lock_guard<std::mutex> lock(m_access_mutex);
 
-        while (m_count <= 0) {
+        while (m_count == 0) {
             m_access_mutex.unlock();
             std::this_thread::yield();
             m_access_mutex.lock();

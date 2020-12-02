@@ -1,5 +1,7 @@
 # Producer/consumer assignment
 
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/a88d51a30aac4dc7a90cde73c7ed6265)](https://www.codacy.com/gh/rossini-andrea/prod-cons/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=rossini-andrea/prod-cons&amp;utm_campaign=Badge_Grade)
+
 ## Design considerations
 
 The application launches two threads and controls their operation with a simple

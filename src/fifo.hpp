@@ -17,10 +17,11 @@ class fifo {
     size_t m_put_index, m_get_index;
     std::array<T, Capacity> m_buffer;
     semaphore<Capacity> m_count_semaphore;
-    //std::mutex m_access_mutex;
 
 public:
-    fifo() : m_count_semaphore(0) {
+    fifo() : m_count_semaphore(0),
+            m_put_index(0),
+            m_get_index(0) {
 
     }
 
